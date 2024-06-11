@@ -8,21 +8,7 @@ body.dark-theme {
     margin: 2rem 0;
 }
 
-.icons_container {
-    display: flex;
-    justify-content: center;
-    margin-top: 2rem;
-}
 
-.icons_container i {
-    font-size: 1.5rem;
-    margin: 0 1rem;
-    cursor: pointer;
-}
-
-.icons_container i:hover {
-    color: #4caf50;
-}
 
 .home_container {
     display: flex;

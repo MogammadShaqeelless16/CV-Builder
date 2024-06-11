@@ -1087,3 +1087,44 @@ img {
     }
 }
 
+.icons_container {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 999;
+    display: flex;
+    flex-direction: column; /* Stack icons vertically */
+    align-items: flex-start; /* Align items to the start of the container */
+  }
+  
+  .icons_container i {
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-bottom: 50px; /* Add space between icons */
+  }
+  
+  .icons_container i:last-child {
+    margin-bottom: 0; /* Remove margin for the last icon */
+  }
+  
+  .icons_container i:hover {
+    color: #4caf50;
+  }
+  
+/* Light Theme */
+.light-theme {
+    /* Define your light theme styles here */
+    background-color: #fff;
+    color: #333;
+  }
+  
+  /* Dark Theme */
+  .dark-theme {
+    /* Define your dark theme styles here */
+    background-color: #333;
+    color: #fff;
+  }
+
+  
+  
+  

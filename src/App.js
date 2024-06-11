@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './index.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import Home from './components/Home/Home';
@@ -16,6 +16,15 @@ import html2canvas from 'html2canvas';
 
 const App = () => {
     const [showAddExperienceButton, setShowAddExperienceButton] = useState(true);
+    const [isDarkTheme, setIsDarkTheme] = useState(false);
+
+    useEffect(() => {
+        if (isDarkTheme) {
+            document.body.classList.add('dark-theme');
+        } else {
+            document.body.classList.remove('dark-theme');
+        }
+    }, [isDarkTheme]);
 
     const generatePDF = () => {
         const input = document.getElementById('area-cv');
@@ -34,6 +43,10 @@ const App = () => {
     const shareContent = () => {
         // Implement sharing functionality here, like sharing to WhatsApp or Facebook
         alert('Implement sharing functionality here');
+    };
+
+    const toggleTheme = () => {
+        setIsDarkTheme(!isDarkTheme);
     };
 
     return (
@@ -66,6 +79,11 @@ const App = () => {
                     className="fa-solid fa-share share-content"
                     title="Share Content"
                     onClick={shareContent}
+                ></i>
+                <i
+                    className={`fa-solid ${isDarkTheme ? 'fa-moon' : 'fa-sun'}`}
+                    title={isDarkTheme ? 'Switch to Light Theme' : 'Switch to Dark Theme'}
+                    onClick={toggleTheme}
                 ></i>
             </div>
         </div>
