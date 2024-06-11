@@ -78,15 +78,6 @@ body.dark-theme {
 
 /* Generate PDF Button */
 
-.generate-pdf {
-    display: none;
-    position: absolute;
-    left: 0;
-    top: 2.2rem;
-    color: var(--text-color);
-    font-size: 1.2rem;
-    cursor: pointer;
-}
 
 .generate-pdf:hover {
     color: var(--title-color);
@@ -424,15 +415,6 @@ body.dark-theme {
 
 /* Generate PDF Button */
 
-.generate-pdf {
-    display: none;
-    position: absolute;
-    left: 0;
-    top: 2.2rem;
-    color: var(--text-color);
-    font-size: 1.2rem;
-    cursor: pointer;
-}
 
 .generate-pdf:hover {
     color: var(--title-color);
@@ -1049,10 +1031,6 @@ img {
     .resume_left,
     .resume_right {
         padding: 0 1.5rem;
-    }
-
-    .generate-pdf {
-        display: inline-block;
     }
 
     .section-title,
