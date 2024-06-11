@@ -1,82 +1,70 @@
-# CV-Builder
+# Getting Started with Create React App
 
-CV-Builder is a responsive resume generator built with React. It allows users to input and edit their personal information, skills, experiences, and other details, and then generate a PDF of their CV. The application also supports dark/light mode switching.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Table of Contents
+## Available Scripts
 
-- [Demo](#demo)
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Components](#components)
-- [License](#license)
+In the project directory, you can run:
 
-## Demo
+### `npm start`
 
-You can try out the CV-Builder application [here](#).
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-## Features
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-- Responsive design
-- Editable sections for personal information, skills, experiences, and more
-- PDF generation
-- Dark/light mode switching
+### `npm test`
 
-## Technologies Used
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-- React
-- HTML5
-- CSS3
-- JavaScript
-- [html2pdf.js](https://github.com/eKoopmans/html2pdf.js) for PDF generation
+### `npm run build`
 
-## Installation
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-1. Clone the repository:
-    ```bash
-    git clone https://github.com/yourusername/cv-builder.git
-    cd cv-builder
-    ```
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-2. Install the dependencies:
-    ```bash
-    npm install
-    ```
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-3. Start the development server:
-    ```bash
-    npm start
-    ```
+### `npm run eject`
 
-## Usage
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-1. Open the application in your web browser (typically at `http://localhost:3000`).
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-2. Navigate through the different sections of the CV and input your information.
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-3. Use the "Download PDF" button to generate and download a PDF version of your CV.
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-4. Toggle between dark and light modes using the theme switch button.
+## Learn More
 
-## Components
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-The project is structured with reusable React components. Below is an overview of the main components:
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-- **Header**: Contains the navigation menu.
-- **Home**: Displays the user's basic information.
-- **Profile**: Allows the user to enter a profile description.
-- **Skills**: Lists the user's skills.
-- **Languages**: Lists the languages the user knows.
-- **Experience**: Shows the user's professional experience.
-- **Certificates**: Displays the user's certifications.
-- **Education**: Lists the user's educational background.
-- **Interests**: Shows the user's interests.
+### Code Splitting
 
-## Contributing
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-Contributions are welcome! Please fork the repository and submit a pull request for any enhancements or bug fixes.
+### Analyzing the Bundle Size
 
-## License
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
