@@ -45,7 +45,7 @@
 }
 
 /* Add more styles as needed */
-.certificate_input {
+.certificate_input , .certificate_year , .certificate_title{
     border: none;
     background-color: transparent;
     color: inherit;

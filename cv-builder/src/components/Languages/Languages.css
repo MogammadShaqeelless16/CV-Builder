@@ -1,0 +1,78 @@
+
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.languages_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.languages_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    width: 100%;
+}
+
+.languages_name_input {
+    border: none;
+    background-color: transparent;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    outline: none;
+    text-align: center;
+    margin: 0.5rem 0;
+    width: 80%;
+}
+
+input[type="range"] {
+    width: 80%;
+    margin: 0.5rem 0;
+}
+
+.languages_box {
+    width: 80%;
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 0.5rem;
+}
+
+.languages_progress {
+    height: 100%;
+    background-color: #4caf50;
+    border-radius: 5px;
+}
+
+.languages_add {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.languages_add_button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+.languages_add_button:hover {
+    background-color: #45a049;
+}

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import "./Education.css"
 const Education = () => {
     const [education, setEducation] = useState([
         { degree: 'B.Sc Computer Science', institution: 'University of XYZ', year: 2018 },
@@ -20,16 +20,19 @@ const Education = () => {
                     <div key={index} className="education_content">
                         <input
                             type="text"
+                            className="education_degree"
                             value={edu.degree}
                             onChange={(e) => updateEducation(index, 'degree', e.target.value)}
                         />
                         <input
                             type="text"
+                            className="education_input"
                             value={edu.institution}
                             onChange={(e) => updateEducation(index, 'institution', e.target.value)}
                         />
                         <input
                             type="number"
+                            className="education_year"
                             value={edu.year}
                             onChange={(e) => updateEducation(index, 'year', e.target.value)}
                         />

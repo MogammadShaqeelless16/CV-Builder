@@ -1,43 +1,61 @@
 /* Home.css */
+body.dark-theme {
+    background-color: #333;
+    color: #fff;
+}
 
 .home {
-    padding: 2rem 0;
+    margin: 2rem 0;
+}
+
+.icons_container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.icons_container i {
+    font-size: 1.5rem;
+    margin: 0 1rem;
+    cursor: pointer;
+}
+
+.icons_container i:hover {
+    color: #4caf50;
 }
 
 .home_container {
     display: flex;
+    justify-content: center;
     align-items: center;
-}
-
-.home_img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    cursor: pointer;
-    margin-right: 2rem;
-}
-
-.home_info {
-    display: flex;
     flex-direction: column;
 }
 
-.home_title {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
+.home_img {
+    cursor: pointer;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
 }
 
-.home_profession {
-    font-size: 1.5rem;
-    color: #707070;
+.home_info {
+    text-align: center;
 }
 
-/* Add more styles as needed */
-.home_input {
+.home_title input,
+.home_profession input {
     border: none;
     background-color: transparent;
     color: inherit;
     font-family: inherit;
     font-size: inherit;
     outline: none;
+    text-align: center;
+    width: 100%;
+}
+
+input[type="file"] {
+    display: none;
 }

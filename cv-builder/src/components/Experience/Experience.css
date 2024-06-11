@@ -51,16 +51,25 @@
 }
 
 .experience_description {
-    width: 100%;
-    height: 100px;
+    width: 30em;
+    height: 7em;
     border: 1px solid var(--text-color);
     border-radius: 5px;
     padding: 0.5rem;
     resize: vertical;
-    margin-bottom: 1rem;
 }
 
 .experience_content:last-child .experience_rounder,
 .experience_content:last-child .experience_line {
     display: none;
+}
+
+.experience_description, .experience_year, .experience_company, .experience_title {
+    border: none;
+    background-color: transparent;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    outline: none;
+    resize: none;
 }

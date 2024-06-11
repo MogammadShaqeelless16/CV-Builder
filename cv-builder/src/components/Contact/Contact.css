@@ -1,0 +1,42 @@
+/* Contact.css */
+
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.contact_container {
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact_information {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-size: var(--normal-font-size);
+}
+
+
+.contact_icon {
+    margin-right: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.contact_input {
+    border: none;
+    background-color: transparent;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    outline: none;
+    width: 100%;
+}
+
+.contact_link {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+}
