@@ -23,3 +23,14 @@
     outline: none;
     resize: vertical;
 }
+
+/* Profile.css */
+.profile_description {
+    border: none;
+    background-color: transparent;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    outline: none;
+    resize: none;
+}

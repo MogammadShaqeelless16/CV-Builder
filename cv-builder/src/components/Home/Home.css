@@ -33,3 +33,11 @@
 }
 
 /* Add more styles as needed */
+.home_input {
+    border: none;
+    background-color: transparent;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    outline: none;
+}
