@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import './Home.css';
-import jsPDF from 'jspdf';
-import html2canvas from 'html2canvas';
 
 const Home = () => {
     const [firstName, setFirstName] = useState('Shaqeel Less');
@@ -26,19 +24,6 @@ const Home = () => {
         setIsDarkTheme(!isDarkTheme);
     };
 
-    const generatePDF = () => {
-        const input = document.getElementById('resume-content');
-        html2canvas(input)
-            .then((canvas) => {
-                const imgData = canvas.toDataURL('image/png');
-                const pdf = new jsPDF('p', 'mm', 'a4');
-                const pdfWidth = pdf.internal.pageSize.getWidth();
-                const pdfHeight = (canvas.height * pdfWidth) / canvas.width;
-                pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
-                pdf.save('resume.pdf');
-            });
-    };
-
     return (
         <section className="home" id="home">
             <div className="icons_container">
@@ -48,14 +33,8 @@ const Home = () => {
                     id="theme-button"
                     onClick={toggleTheme}
                 ></i>
-                <i
-                    className="fa-solid fa-download generate-pdf"
-                    title="Generate PDF"
-                    id="resume-button"
-                    onClick={generatePDF}
-                ></i>
             </div>
-            <div className="home_container section bd-grid" id="resume-content">
+            <div className="home_container section bd-grid" id="home">
                 <input
                     type="file"
                     id="profile-img-upload"

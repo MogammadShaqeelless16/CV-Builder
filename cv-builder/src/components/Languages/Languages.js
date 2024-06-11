@@ -4,7 +4,7 @@ import './Languages.css';
 const Languages = () => {
     const [languages, setLanguages] = useState([
         { name: 'English', level: 90 },
-        { name: 'Spanish', level: 70 },
+        { name: 'Afrikaans', level: 70 },
     ]);
     const [newLanguage, setNewLanguage] = useState('');
     const [newLevel, setNewLevel] = useState(0);

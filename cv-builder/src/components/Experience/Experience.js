@@ -1,9 +1,7 @@
-// Experience.js
-
 import React, { useState } from 'react';
 import './Experience.css';
 
-const Experience = () => {
+const Experience = ({ showAddButton }) => {
     const [experiences, setExperiences] = useState([
         {
             title: "ANALYST PROGRAMMER",
@@ -76,7 +74,7 @@ const Experience = () => {
                     </div>
                 ))}
             </div>
-            <button onClick={addExperience}>Add Experience</button>
+            {showAddButton && <button onClick={addExperience}>Add Experience</button>}
         </section>
     );
 }

@@ -16,6 +16,7 @@
     align-items: center;
     margin-bottom: 1rem;
     font-size: var(--normal-font-size);
+    width: 100%;
 }
 
 

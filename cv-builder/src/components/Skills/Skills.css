@@ -1,48 +1,84 @@
-/* Skills.css */
-
 .skills {
-    padding: 2rem 0;
-}
-
-.skills_container {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.skills_content {
+    padding: 20px;
+  }
+  
+  .section-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .skills_container {
     display: flex;
     flex-direction: column;
-    margin-right: 2rem; /* Adjust spacing between skill categories */
-}
-
-.skills_name {
-    margin-bottom: 1rem;
-}
-
-.skills_text {
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-}
-
-.skills_box {
-    width: 150px; /* Adjust width of skill bars */
-    height: 10px; /* Adjust height of skill bars */
-    background-color: #ddd; /* Background color of skill bars */
-    border-radius: 5px; /* Adjust border radius of skill bars */
-}
-
-.skills_progress {
+  }
+  
+  .skills_content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .skills_name {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  
+  .skills_input-text {
+    margin-bottom: 10px;
+    padding: 8px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .skills_input-number {
+    margin-bottom: 10px;
+    padding: 8px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .skills_box {
+    background-color: #f0f0f0;
+    height: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 5px;
+  }
+  
+  .skills_progress {
+    display: block;
     height: 100%;
-    background-color: #007bff; /* Color of the filled part of skill bars */
-    border-radius: 5px; /* Adjust border radius of skill bars */
-}
+    background-color: #4caf50;
+    border-radius: 5px;
+  }
+  
+  .skills_input-range {
+    width: calc(100% - 16px);
+    margin-top: 5px;
+  }
+  
+  .skills_add-button {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .skills_add-button:hover {
+    background-color: #45a049;
+  }
 
-/* Add more styles as needed */
-.skills_input {
+  .skills_input-text {
     border: none;
     background-color: transparent;
     color: inherit;
     font-family: inherit;
     font-size: inherit;
     outline: none;
+    width: 100%;
 }
+  
