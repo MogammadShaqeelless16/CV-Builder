@@ -1,28 +1,36 @@
 import React from 'react';
-import Header from './components/Header';
-import Home from './components/Home';
-import Profile from './components/Profile';
-import Skills from './components/Skills';
-// Import other components here
-import html2pdf from 'html2pdf.js';
 import './App.css';
+import './index.css';
+import Header from './components/Header';
+import Home from './components/Home/Home';
+import Skills from './components/Skills/Skills';
+import Languages from './components/Languages';
+import Experience from './components/Experience/Experience';
+import Certificates from './components/Certificates/Certificates';
+import Profile from './components/Profile/Profile';
+import Education from './components/Education/Education';
+import Interests from './components/Interests';
 
 const App = () => {
-    const generatePDF = () => {
-        const element = document.getElementById('cv');
-        html2pdf().from(element).save();
-    };
-
     return (
-        <div id="cv">
+        <div className="App">
             <Header />
             <main className="l-main bd-container">
-                <Home />
-                <Profile />
-                <Skills />
-                {/* Add other components here */}
+                <div className="resume" id="area-cv">
+                    <div className="resume_left">
+                        <Home />
+                        <Profile />
+                        <Skills />
+                        <Languages />
+                    </div>
+                    <div className="resume_right">
+                    <Experience />
+                        <Certificates />
+                        <Education />
+                        <Interests />
+                    </div>
+                </div>
             </main>
-            <button onClick={generatePDF}>Download PDF</button>
         </div>
     );
 };

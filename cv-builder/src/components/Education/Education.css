@@ -1,0 +1,48 @@
+.education {
+    padding: 1.5rem 0;
+}
+
+.section-title {
+    font-size: var(--h2-font-size);
+    color: var(--title-color);
+    font-weight: var(--font-semi-bold);
+    text-transform: uppercase;
+    letter-spacing: .35rem;
+    text-align: center;
+    margin-bottom: var(--margin-3);
+}
+
+.education_container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.education_content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.education_time {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.education_rounder {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--title-color);
+}
+
+.education_line {
+    position: absolute;
+    width: 2px;
+    height: calc(100% - 12px);
+    background-color: var(--title-color);
+    left: 50%;
+    transform: translateX(-50%);
+}
