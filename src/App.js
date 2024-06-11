@@ -1,4 +1,3 @@
-import './App.css';
 import React, { useState } from 'react';
 import './index.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
@@ -28,14 +27,17 @@ const App = () => {
                 const pdfHeight = (canvas.height * pdfWidth) / canvas.width;
                 pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
                 pdf.save('resume.pdf');
-        
             });
-            setShowAddExperienceButton(false);
-            
+        setShowAddExperienceButton(false);
+    };
+
+    const shareContent = () => {
+        // Implement sharing functionality here, like sharing to WhatsApp or Facebook
+        alert('Implement sharing functionality here');
     };
 
     return (
-        <div className= "App">
+        <div className="App">
             <main className="l-main bd-container">
                 <div className="resume" id="area-cv">
                     <div className="resume_left">
@@ -59,6 +61,11 @@ const App = () => {
                     className="fa-solid fa-download generate-pdf"
                     title="Generate PDF"
                     onClick={generatePDF}
+                ></i>
+                <i
+                    className="fa-solid fa-share share-content"
+                    title="Share Content"
+                    onClick={shareContent}
                 ></i>
             </div>
         </div>

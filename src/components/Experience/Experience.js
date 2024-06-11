@@ -4,15 +4,15 @@ import './Experience.css';
 const Experience = ({ showAddButton }) => {
     const [experiences, setExperiences] = useState([
         {
-            title: "ANALYST PROGRAMMER",
-            company: "Sandwichcourse | IES Ingénierie - France",
-            year: "October 2022 - present",
+            title: "Java Developer",
+            company: "RED-i PRoeprty Technology",
+            year: "July 2021 - present",
             description: "Work in this company dedicating the best responsibility in the area that corresponds, delivering the best results for the company and improving productivity."
         },
         {
-            title: "ANALYST PROGRAMMER",
-            company: "Internship | IES Ingénierie - France",
-            year: "April 2021 - June 2021",
+            title: "Web Developer",
+            company: "University of Cape town",
+            year: "April 2021 - June 2023",
             description: "Work in this company dedicating the best responsibility in the area that corresponds, delivering the best results for the company and improving productivity."
         }
     ]);
