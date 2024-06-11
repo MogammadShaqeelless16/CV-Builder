@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../styles.css'; 
+
 const Skills = () => {
     const [skills, setSkills] = useState([
         { name: "CSS", level: 85 },
