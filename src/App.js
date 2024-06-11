@@ -40,11 +40,25 @@ const App = () => {
         setShowAddExperienceButton(false);
     };
 
-    const shareContent = () => {
-        // Implement sharing functionality here, like sharing to WhatsApp or Facebook
-        alert('Implement sharing functionality here');
-    };
+    const shareContent = async () => {
+        const shareData = {
+            title: 'Check out my resume!',
+            text: 'Here is my resume. Have a look!',
+            url: window.location.href
+        };
 
+        try {
+            if (navigator.share) {
+                await navigator.share(shareData);
+                console.log('Content shared successfully');
+            } else {
+                await navigator.clipboard.writeText(window.location.href);
+                alert('Link copied to clipboard');
+            }
+        } catch (err) {
+            console.error('Error sharing content: ', err);
+        }
+    };
     const toggleTheme = () => {
         setIsDarkTheme(!isDarkTheme);
     };
