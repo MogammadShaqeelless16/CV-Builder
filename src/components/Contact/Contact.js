@@ -20,7 +20,6 @@ const Contact = () => {
                     />
                 </span>
                 <span className="contact_information">
-                    <a href={`mailto:${email}`} className="contact_link">
                         <i className="fa-solid fa-envelope contact_icon"></i>
                         <input
                             type="text"
@@ -28,7 +27,6 @@ const Contact = () => {
                             onChange={(e) => setEmail(e.target.value)}
                             className="contact_input"
                         />
-                    </a>
                 </span>
                 <span className="contact_information">
                     <a href={`tel:${phone}`} className="contact_link">

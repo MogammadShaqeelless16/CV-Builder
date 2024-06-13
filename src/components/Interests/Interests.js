@@ -3,13 +3,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faPlus,
     faTimes,
+    faHeart,
     faCode,
     faBook,
     faHiking,
     faGamepad,
     faMusic,
     faFutbol,
-    faHeart,
     faLightbulb,
 } from '@fortawesome/free-solid-svg-icons';
 import './Interests.css';
@@ -42,7 +42,6 @@ const defaultInterests = [
     { id: 5, name: 'Music', icon: defaultIcons.music, iconUrl: defaultIconUrls.music },
     { id: 6, name: 'Rugby', icon: defaultIcons.rugby, iconUrl: defaultIconUrls.rugby },
     { id: 7, name: 'Innovation', icon: defaultIcons.innovation, iconUrl: defaultIconUrls.innovation },
-    { id: 8, name: 'Traveling', icon: defaultIcons.biking, iconUrl: defaultIconUrls.biking },
 ];
 
 const Interests = () => {
@@ -86,8 +85,8 @@ const Interests = () => {
         }
     };
 
-    const removeInterest = (index) => {
-        const updatedInterests = interests.filter((interest) => interest.id !== index);
+    const removeInterest = (id) => {
+        const updatedInterests = interests.filter((interest) => interest.id !== id);
         setInterests(updatedInterests);
     };
 
@@ -117,12 +116,6 @@ const Interests = () => {
                                     src={interest.iconUrl}
                                     alt={interest.name}
                                     className="icon-image"
-                                    onClick={() => handleIconClick(interest.id)}
-                                />
-                            ) : typeof interest.icon === 'string' ? (
-                                <FontAwesomeIcon
-                                    icon={interest.icon || faHeart}
-                                    className="default-icon"
                                     onClick={() => handleIconClick(interest.id)}
                                 />
                             ) : (

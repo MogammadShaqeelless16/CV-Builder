@@ -1,55 +1,71 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faCodepen, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import { faPlus, faEdit, faTrash } from '@fortawesome/free-solid-svg-icons';
 import './Social.css';
+
+// Import icons from FontAwesome library
+import {
+    faGithub,
+    faCodepen,
+    faLinkedin,
+    faFacebook,
+    faInstagram,
+    faTiktok
+} from '@fortawesome/free-brands-svg-icons';
+
+// Object mapping social media names to FontAwesome icons
+const socialIcons = {
+    Github: faGithub,
+    CodePen: faCodepen,
+    LinkedIn: faLinkedin,
+    Facebook: faFacebook,
+    Instagram: faInstagram,
+    TikTok: faTiktok,
+};
 
 const Social = () => {
     const [socialLinks, setSocialLinks] = useState([
-        { name: "Github", link: "https://github.com/username", icon: faGithub },
-        { name: "CodePen", link: "https://codepen.io/username", icon: faCodepen },
-        { name: "LinkedIn", link: "https://www.linkedin.com/in/username", icon: faLinkedin }
+        { id: 1, name: "Github", link: "https://github.com/username" },
+        { id: 2, name: "CodePen", link: "https://codepen.io/username" },
+        { id: 3, name: "LinkedIn", link: "https://www.linkedin.com/in/username" },
+        { id: 4, name: "Facebook", link: "https://www.facebook.com/username" },
+        { id: 5, name: "Instagram", link: "https://www.instagram.com/username" },
+        { id: 6, name: "TikTok", link: "https://www.tiktok.com/@username" }
     ]);
 
-    const [newLink, setNewLink] = useState({ name: '', icon: null });
+    const [newLink, setNewLink] = useState({ id: null, name: '', link: '' });
+    const [showAddLink, setShowAddLink] = useState(false);
 
-    const updateLink = (index, key, value) => {
-        const updatedLinks = socialLinks.map((link, i) =>
-            i === index ? { ...link, [key]: value } : link
-        );
+    // Functions to update social links
+    const handleInputChange = (e) => {
+        const { name, value } = e.target;
+        setNewLink((prevLink) => ({ ...prevLink, [name]: value }));
+    };
+
+    const addOrUpdateLink = () => {
+        if (newLink.name.trim() !== '' && newLink.link.trim() !== '') {
+            if (newLink.id) {
+                const updatedLinks = socialLinks.map((link) =>
+                    link.id === newLink.id ? { ...newLink } : link
+                );
+                setSocialLinks(updatedLinks);
+            } else {
+                const newId = socialLinks.length > 0 ? socialLinks[socialLinks.length - 1].id + 1 : 1;
+                setSocialLinks([...socialLinks, { ...newLink, id: newId }]);
+            }
+            setNewLink({ id: null, name: '', link: '' });
+            setShowAddLink(false);
+        }
+    };
+
+    const editLink = (link) => {
+        setNewLink({ ...link });
+        setShowAddLink(true);
+    };
+
+    const deleteLink = (id) => {
+        const updatedLinks = socialLinks.filter((link) => link.id !== id);
         setSocialLinks(updatedLinks);
-    };
-
-    const handleIconChange = (index, file) => {
-        const reader = new FileReader();
-        reader.onload = (e) => {
-            const updatedLinks = socialLinks.map((link, i) =>
-                i === index ? { ...link, iconUrl: e.target.result, icon: null } : link
-            );
-            setSocialLinks(updatedLinks);
-        };
-        reader.readAsDataURL(file);
-    };
-
-    const addSocialLink = () => {
-        if (newLink.name.trim() !== '') {
-            setSocialLinks([...socialLinks, { ...newLink, icon: defaultIcons[newLink.name] }]);
-            setNewLink({ name: '', icon: null });
-        }
-    };
-
-    const defaultIcons = {
-        Github: faGithub,
-        CodePen: faCodepen,
-        LinkedIn: faLinkedin,
-        // Add more social platforms as needed
-    };
-
-    const handleNameClick = (index) => {
-        const link = prompt(`Enter link for ${socialLinks[index].name}:`, socialLinks[index].link);
-        if (link !== null) {
-            updateLink(index, 'link', link.trim());
-        }
     };
 
     return (
@@ -57,41 +73,68 @@ const Social = () => {
             <h2 className="section-title">Social</h2>
 
             <div className="social_container bd-grid">
-                {socialLinks.map((link, index) => (
-                    <div key={index} className="social_link">
-                        <div className="icon-container">
-                            {link.iconUrl ? (
-                                <img
-                                    src={link.iconUrl}
-                                    alt={link.name}
-                                    className="social_icon"
-                                />
-                            ) : (
-                                <FontAwesomeIcon
-                                    icon={link.icon || defaultIcons[link.name]}
-                                    className="default-icon"
-                                />
-                            )}
-                            <input
-                                type="file"
-                                accept="image/*"
-                                onChange={(e) => handleIconChange(index, e.target.files[0])}
-                                className="icon-upload"
+                {socialLinks.map((link) => (
+                    <div key={link.id} className="social_link">
+                        <div className="icon-container-social">
+                            <FontAwesomeIcon
+                                icon={socialIcons[link.name]}
+                                className="social_icon"
                             />
                         </div>
-                        <span
+                        <a
+                            href={link.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="social_name"
-                            onClick={() => handleNameClick(index)}
                         >
                             {link.name}
-                        </span>
+                        </a>
+                        <div className="social_actions">
+                            <FontAwesomeIcon
+                                icon={faEdit}
+                                className="edit-icon"
+                                onClick={() => editLink(link)}
+                            />
+                            <FontAwesomeIcon
+                                icon={faTrash}
+                                className="delete-icon"
+                                onClick={() => deleteLink(link.id)}
+                            />
+                        </div>
                     </div>
                 ))}
                 <div className="social_link">
-                    <div className="icon-container">
-                        <FontAwesomeIcon icon={faPlus} className="add-icon" onClick={addSocialLink} />
-                    </div>
-                    <span className="add-text" onClick={addSocialLink}>Add Social Link</span>
+                    {!showAddLink && (
+                        <button className="add-link-button" onClick={() => setShowAddLink(true)}>
+                            <FontAwesomeIcon icon={faPlus} className="add-icon" />
+                            Add Social Link
+                        </button>
+                    )}
+                    {showAddLink && (
+                        <div className="add-link-form">
+                            <input
+                                type="text"
+                                name="name"
+                                placeholder="Social Platform"
+                                value={newLink.name}
+                                onChange={handleInputChange}
+                                className="link-input"
+                                required
+                            />
+                            <input
+                                type="url"
+                                name="link"
+                                placeholder="Link"
+                                value={newLink.link}
+                                onChange={handleInputChange}
+                                className="link-input"
+                                required
+                            />
+                            <button onClick={addOrUpdateLink} className="save-button">
+                                {newLink.id ? 'Update Link' : 'Add Link'}
+                            </button>
+                        </div>
+                    )}
                 </div>
             </div>
         </section>
