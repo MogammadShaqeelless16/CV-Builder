@@ -8,7 +8,7 @@ import Experience from './components/Experience/Experience';
 import Certificates from './components/Certificates/Certificates';
 import Profile from './components/Profile/Profile';
 import Education from './components/Education/Education';
-import Interests from './components/Interests';
+import Interests from './components/Interests/Interests';
 import Contact from './components/Contact/Contact';
 import Social from './components/Social/Social';
 

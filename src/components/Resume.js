@@ -6,7 +6,7 @@ import Languages from './Languages';
 import Experience from './Experience';
 import Certificates from './Certificates';
 import Education from './Education';
-import Interests from './Interests';
+import Interests from './Interests/Interests';
 
 function Resume() {
   return (
