@@ -414,7 +414,9 @@ body.dark-theme {
 }
 
 /* Generate PDF Button */
-
+body, html {
+    overflow-x: hidden;
+}
 
 .generate-pdf:hover {
     color: var(--title-color);

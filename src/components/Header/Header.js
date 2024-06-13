@@ -6,7 +6,7 @@ import './Header.css'; // Import the CSS file
 
 const Header = ({ setShowAddExperienceButton }) => {
     const [isDarkTheme, setIsDarkTheme] = useState(false);
-    const [showIcons, setShowIcons] = useState(false);
+    const [showIcons, setShowIcons] = useState(true); // Initialize showIcons to true
 
     useEffect(() => {
         if (isDarkTheme) {
@@ -86,9 +86,13 @@ const Header = ({ setShowAddExperienceButton }) => {
         alert('Here is how to use the app...');
     };
 
+    const toggleIcons = () => {
+        setShowIcons(!showIcons);
+    };
+
     return (
         <div>
-            <div className={`fab-container ${showIcons ? 'open' : ''}`} onClick={() => setShowIcons(!showIcons)}>
+            <div className={`fab-container ${showIcons ? 'open' : ''} ${isDarkTheme ? 'dark-theme' : 'light-theme'}`} onClick={toggleIcons}>
                 <i className="fa-solid fa-plus fab-icon"></i>
             </div>
             <div className={`icons_container ${showIcons ? 'show' : ''}`}>
