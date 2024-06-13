@@ -11,6 +11,7 @@ import Education from './components/Education/Education';
 import Interests from './components/Interests/Interests';
 import Contact from './components/Contact/Contact';
 import Social from './components/Social/Social';
+import Portfolio from './components/Portfolio/Portfolio';
 
 const App = () => {
     const [showAddExperienceButton, setShowAddExperienceButton] = useState(true);
@@ -33,6 +34,7 @@ const App = () => {
                         <Certificates />
                         <Education />
                         <Interests />
+                        <Portfolio />
                     </div>
                 </div>
             </main>

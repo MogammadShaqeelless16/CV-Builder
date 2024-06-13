@@ -1,0 +1,88 @@
+
+
+.portfolio_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.portfolio_content {
+    background-color: inherit;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.project-input {
+    border: none;
+}
+
+.project-icons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.icon-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.project-image {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.default-icon {
+    font-size: 24px;
+    color: inherit;
+    cursor: pointer;
+}
+
+.icon-upload {
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.remove-icon {
+    font-size: 18px;
+    color: #f00;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.add-icon {
+    font-size: 24px;
+    color: #0f0;
+    cursor: pointer;
+}
+
+.add-project-btn,
+.save-projects-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: inherit;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.save-projects-btn {
+    background-color: #28a745;
+}
+
+@media (max-width: 768px) {
+    .portfolio_container {
+        grid-template-columns: 1fr;
+    }
+}

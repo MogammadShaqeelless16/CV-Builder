@@ -100,7 +100,7 @@ const Interests = () => {
 
     return (
         <section className="interests">
-            <h2>Interests</h2>
+            <h2 className="section-title">Interests</h2>
             <div className="interests_container">
                 {interests.map((interest) => (
                     <div key={interest.id} className="interests_content">

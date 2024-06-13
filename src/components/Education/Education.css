@@ -1,20 +1,14 @@
-.education {
-    padding: 1.5rem 0;
-}
 
-.section-title {
-    font-size: var(--h2-font-size);
-    color: var(--title-color);
-    font-weight: var(--font-semi-bold);
-    text-transform: uppercase;
-    letter-spacing: .35rem;
-    margin-bottom: var(--margin-3);
-}
 
 .education_container {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+}
+
+.education_list {
+    list-style-type: disc; /* Use bullet points for the list */
+    padding-left: 1.5rem; /* Add left padding to align with bullets */
 }
 
 .education_content {
@@ -54,4 +48,65 @@
     font-size: inherit;
     outline: none;
     resize: none;
+}
+
+.education_container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.education_list {
+    list-style-type: none; /* Remove default list styles */
+    padding: 0; /* Remove default padding */
+}
+
+.education_list li {
+    color: inherit; /* Inherit text color */
+    padding-left: 1.5rem; /* Adjust left padding for bullet space */
+    position: relative; /* Position relative for bullet pseudo-element */
+}
+
+.education_list li::before {
+    content: '\2022'; /* Bullet character (Unicode) */
+    position: absolute;
+    left: 0;
+}
+
+.education_content {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.education_degree,
+.education_input,
+.education_year {
+    border: none;
+    background-color: transparent;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    outline: none;
+    resize: none;
+    width: 100%; /* Ensure inputs take full width */
+}
+
+.education_degree {
+    flex: 2; /* Degree input takes more space */
+}
+
+.education_input {
+    flex: 3; /* Institution input takes more space */
+}
+
+.education_year {
+    flex: 1; /* Year input takes less space */
+}
+
+.education_list li::before {
+    content: '\2022'; /* Bullet character (Unicode) */
+    position: absolute;
+    left: 0;
+    font-size: 45px; /* Adjust bullet size */
+    line-height: 1.5rem; /* Ensure line height matches bullet size */
 }
