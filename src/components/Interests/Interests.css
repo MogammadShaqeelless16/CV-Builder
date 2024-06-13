@@ -1,82 +1,70 @@
-/* Interests Component Styling */
 .interests {
-    margin-bottom: 20px;
+    padding: 20px;
 }
 
 .interests h2 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .interests_container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
 }
 
 .interests_content {
+    position: relative;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    background-color: #f0f0f0;
-    padding: 10px;
-    border-radius: 5px;
+}
+
+.interest-input {
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 8px;
+    border: none; /* Remove border */
+    background-color: transparent; /* Transparent background */
+    font: inherit; /* Inherit font */
+    color: inherit; /* Inherit text color */
+    outline: none; /* Remove outline */
+}
+
+.icon-container {
+    position: relative;
+    width: 50px;
+    height: 50px;
     margin-bottom: 10px;
 }
 
-.interests_content input[type='text'] {
-    flex: 1;
-    font-size: 1rem;
-    padding: 5px;
-    margin-right: 10px;
+.icon-image,
+.default-icon {
+    width: 100%;
+    height: 100%;
+}
+
+.icon-upload {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
 }
 
 .remove-icon {
     cursor: pointer;
     color: red;
-    margin-left: 5px;
-}
-
-.add-icon {
-    cursor: pointer;
-    color: green;
-    margin-left: 5px;
 }
 
 .new-interest {
-    background-color: #e0e0e0;
+    display: flex;
+    align-items: center;
 }
 
-.new-interest input[type='text']::placeholder {
-    color: #888;
-}
-
-/* Additional input styling */
-.interests_content input[type='text'], .new-interest input[type='text'], .interest-input {
-    border: none;
-    background-color: transparent;
-    color: inherit;
-    font-family: inherit;
-    font-size: inherit;
-    outline: none;
-    text-align: center;
-    width: 100%;
-}
-
-/* Responsive adjustments */
-@media screen and (max-width: 768px) {
-    .interests_container {
-        grid-template-columns: 1fr;
-    }
-}
-
-.interest-input input {
-    border: none;
-    background-color: transparent;
-    color: inherit;
-    font-family: inherit;
-    font-size: inherit;
-    outline: none;
-    text-align: center;
-    width: 100%;
+.add-icon {
+    margin-left: 10px;
+    cursor: pointer;
+    color: green;
 }

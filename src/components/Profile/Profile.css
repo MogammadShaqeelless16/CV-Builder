@@ -13,7 +13,7 @@
 
 .profile_description {
     width: 100%;
-    min-height: 200px;
+    min-height: 300px;
     border: 1px solid var(--container-color);
     border-radius: 8px;
     padding: 0.75rem;
