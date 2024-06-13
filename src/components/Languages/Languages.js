@@ -17,12 +17,6 @@ const Languages = () => {
         { label: 'Fluent/Native', max: 100, color: '#007bff' },
     ];
 
-    const updateLanguageProficiency = (index, proficiency) => {
-        const newLanguages = [...languages];
-        newLanguages[index].proficiency = proficiency;
-        newLanguages[index].years = getProficiencyLabel(proficiency);
-        setLanguages(newLanguages);
-    };
 
     const handleNewLanguageChange = (e) => {
         const { name, value } = e.target;
@@ -133,11 +127,5 @@ const Languages = () => {
     );
 };
 
-const proficiencyLevels = [
-    { label: 'Beginner', max: 25, color: '#28a745' },
-    { label: 'Intermediate', max: 50, color: '#ffc107' },
-    { label: 'Advanced', max: 75, color: '#fd7e14' },
-    { label: 'Fluent/Native', max: 100, color: '#007bff' },
-];
 
 export default Languages;

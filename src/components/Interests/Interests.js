@@ -5,42 +5,43 @@ import {
     faTimes,
     faCode,
     faBook,
-    faHeart,
+    faHiking,
     faGamepad,
     faMusic,
-    faFilm,
-    faBiking,
+    faFutbol,
+    faHeart,
+    faLightbulb,
 } from '@fortawesome/free-solid-svg-icons';
 import './Interests.css';
 
 const defaultIcons = {
     coding: faCode,
     reading: faBook,
-    heart: faHeart,
+    hiking: faHiking,
     game: faGamepad,
     music: faMusic,
-    film: faFilm,
-    biking: faBiking,
+    rugby: faFutbol,
+    innovation: faLightbulb,
 };
 
 const defaultIconUrls = {
     coding: 'default-coding.png',
     reading: 'default-reading.png',
-    heart: 'default-interest.png',
+    hiking: 'default-hiking.png',
     game: 'default-interest.png',
     music: 'default-interest.png',
-    film: 'default-interest.png',
-    biking: 'default-interest.png',
+    rugby: 'default-interest.png',
+    innovation: 'default-interest.png',
 };
 
 const defaultInterests = [
     { id: 1, name: 'Coding', icon: defaultIcons.coding, iconUrl: defaultIconUrls.coding },
     { id: 2, name: 'Reading', icon: defaultIcons.reading, iconUrl: defaultIconUrls.reading },
-    { id: 3, name: 'Hiking', icon: defaultIcons.heart, iconUrl: defaultIconUrls.heart },
+    { id: 3, name: 'Hiking', icon: defaultIcons.hiking, iconUrl: defaultIconUrls.hiking },
     { id: 4, name: 'Gaming', icon: defaultIcons.game, iconUrl: defaultIconUrls.game },
     { id: 5, name: 'Music', icon: defaultIcons.music, iconUrl: defaultIconUrls.music },
-    { id: 6, name: 'Film', icon: defaultIcons.film, iconUrl: defaultIconUrls.film },
-    { id: 7, name: 'Biking', icon: defaultIcons.biking, iconUrl: defaultIconUrls.biking },
+    { id: 6, name: 'Rugby', icon: defaultIcons.rugby, iconUrl: defaultIconUrls.rugby },
+    { id: 7, name: 'Innovation', icon: defaultIcons.innovation, iconUrl: defaultIconUrls.innovation },
     { id: 8, name: 'Traveling', icon: defaultIcons.biking, iconUrl: defaultIconUrls.biking },
 ];
 
@@ -116,6 +117,12 @@ const Interests = () => {
                                     src={interest.iconUrl}
                                     alt={interest.name}
                                     className="icon-image"
+                                    onClick={() => handleIconClick(interest.id)}
+                                />
+                            ) : typeof interest.icon === 'string' ? (
+                                <FontAwesomeIcon
+                                    icon={interest.icon || faHeart}
+                                    className="default-icon"
                                     onClick={() => handleIconClick(interest.id)}
                                 />
                             ) : (

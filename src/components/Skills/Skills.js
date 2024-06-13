@@ -15,24 +15,7 @@ const Skills = () => {
 
     const skillLevels = ['Beginner', 'Intermediate', 'Advanced', 'Expert'];
 
-    const updateSkillLevel = (index, level) => {
-        const newSkills = [...skills];
-        newSkills[index].proficiency = level;
-        setSkills(newSkills);
-    };
-
-    const updateSkillName = (index, name) => {
-        const newSkills = [...skills];
-        newSkills[index].name = name;
-        setSkills(newSkills);
-    };
-
-    const updateSkillYears = (index, years) => {
-        const newSkills = [...skills];
-        newSkills[index].years = years;
-        setSkills(newSkills);
-    };
-
+    // Functions to update skills
     const handleNewSkillChange = (e) => {
         const { name, value } = e.target;
         setNewSkill((prevSkill) => ({ ...prevSkill, [name]: value }));
