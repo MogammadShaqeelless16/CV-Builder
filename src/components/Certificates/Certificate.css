@@ -1,55 +1,55 @@
-/* Certificate.css */
-
-.certificate {
-    padding: 2rem 0;
-}
 
 .certificate_container {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    gap: 20px;
 }
 
 .certificate_content {
     display: flex;
     align-items: center;
-    margin-right: 2rem; /* Adjust spacing between certificate items */
+    padding: 10px;
+    border-radius: 5px;
+    background-color: inherit;
 }
 
 .certificate_item {
-    margin-right: 1rem; /* Adjust spacing between the circle and the text */
+    position: relative;
+    margin-right: 20px;
 }
 
 .certificate_rounder {
-    width: 10px; /* Adjust size of the circle */
-    height: 10px; /* Adjust size of the circle */
-    border-radius: 50%; /* Make the circle round */
-    background-color: #007bff; /* Color of the circle */
+    width: 10px;
+    height: 10px;
+    background-color: #555;
+    border-radius: 50%;
 }
 
-.certificate_data {
-    display: flex;
-    flex-direction: column;
-}
 
-.certificate_year {
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-}
-
+.certificate_year,
 .certificate_title {
-    font-weight: bold;
-}
-
-.certificate_honours {
-    font-style: italic;
-}
-
-/* Add more styles as needed */
-.certificate_input , .certificate_year , .certificate_title{
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 5px;
     border: none;
     background-color: transparent;
     color: inherit;
     font-family: inherit;
     font-size: inherit;
     outline: none;
+    resize: none;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 20px 0;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
 }

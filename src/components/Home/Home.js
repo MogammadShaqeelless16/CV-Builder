@@ -3,7 +3,7 @@ import './Home.css';
 
 const Home = () => {
     const [firstName, setFirstName] = useState('Shaqeel Less');
-    const [profession, setProfession] = useState('Analyst developer');
+    const [profession, setProfession] = useState('Software developer');
     const [profileImg, setProfileImg] = useState('/assets/shaqeel.png'); // Updated profileImg state with the path to the default profile picture
 
     const handleImageUpload = (event) => {

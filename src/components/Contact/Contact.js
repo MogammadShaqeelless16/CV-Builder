@@ -5,6 +5,7 @@ const Contact = () => {
     const [address, setAddress] = useState('72 Austin Crescent Cape Town');
     const [email, setEmail] = useState('Shaqeelless4@gmail.com');
     const [phone, setPhone] = useState('081 374 6844');
+    const [website, setWebsite] = useState('shaqeelless.netlify.app');
 
     return (
         <section className="contact section" id="contact">
@@ -20,13 +21,13 @@ const Contact = () => {
                     />
                 </span>
                 <span className="contact_information">
-                        <i className="fa-solid fa-envelope contact_icon"></i>
-                        <input
-                            type="text"
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                            className="contact_input"
-                        />
+                    <i className="fa-solid fa-envelope contact_icon"></i>
+                    <input
+                        type="text"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        className="contact_input"
+                    />
                 </span>
                 <span className="contact_information">
                     <a href={`tel:${phone}`} className="contact_link">
@@ -35,6 +36,17 @@ const Contact = () => {
                             type="text"
                             value={phone}
                             onChange={(e) => setPhone(e.target.value)}
+                            className="contact_input"
+                        />
+                    </a>
+                </span>
+                <span className="contact_information">
+                    <a href={website} target="_blank" rel="noopener noreferrer" className="contact_link">
+                        <i className="fa-solid fa-globe contact_icon"></i>
+                        <input
+                            type="text"
+                            value={website}
+                            onChange={(e) => setWebsite(e.target.value)}
                             className="contact_input"
                         />
                     </a>

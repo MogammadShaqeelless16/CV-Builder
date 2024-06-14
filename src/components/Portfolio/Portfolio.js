@@ -11,13 +11,12 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import './Portfolio.css'; // Import the CSS file for styling
 
-const defaultProjectImage = 'default-project.png'; // Placeholder image URL
-
 const Portfolio = () => {
     const [projects, setProjects] = useState([
-        { id: 1, name: 'Project 1', githubLink: '', demoLink: '' },
-        { id: 2, name: 'Project 2', githubLink: '', demoLink: '' },
-        { id: 3, name: 'Project 3', githubLink: '', demoLink: '' },
+        { id: 1, name: 'SLIMS', githubLink: 'https://github.com/MogammadShaqeelless16/PowerDash', demoLink: 'https://powerdash.netlify.app/' },
+        { id: 2, name: 'UNEMPLOYMENT READER', githubLink: 'https://github.com/MogammadShaqeelless16/Unemployment_Matric_Reader', demoLink: 'https://unemployment-matric-reader.onrender.com/' },
+        { id: 3, name: 'CRECHESPOTS', githubLink: 'https://github.com/amaann2/trexxplore', demoLink: 'https://crechespots.onrender.com/' },
+        { id: 4, name: 'DATACITY', githubLink: 'https://github.com/MogammadShaqeelless16/UVU-AfricaHackathon', demoLink: 'https://datacity.netlify.app/' },
     ]);
 
     const [newProject, setNewProject] = useState({ name: '', githubLink: '', demoLink: '' });
@@ -63,7 +62,18 @@ const Portfolio = () => {
             <div className="portfolio_container">
                 {projects.map((project) => (
                     <div key={project.id} className="portfolio_content">
-                        <img src={defaultProjectImage} alt="Project" className="project-image" />
+                        {project.editing ? (
+                            <input
+                                type="text"
+                                name="name"
+                                value={project.name}
+                                onChange={(e) => updateProject(project.id, 'name', e.target.value)}
+                                className="project-input"
+                                placeholder="Project Name"
+                            />
+                        ) : (
+                            <h3 className="project-name">{project.name}</h3>
+                        )}
                         <div className="project-icons">
                             {project.editing ? (
                                 <>
